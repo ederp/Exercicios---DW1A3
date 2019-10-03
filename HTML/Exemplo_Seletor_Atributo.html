@@ -5,8 +5,8 @@
     <style type="text/css">
       p {color : white}
       /* p[class ] {color : red } Todos os atributos ficam na cor vermelha */ 
-       p[class = time-arg] {color : red }
-      /* p[class |= time ] {color : red } */
+      /* p[class = time-arg] {color : red } Somente os atributos selecionados ficam na cor vermelha */
+      p[class |= time ] {color : red }
       /* p[class ~= sp ] {color : red } */
     </style>
   </head>
