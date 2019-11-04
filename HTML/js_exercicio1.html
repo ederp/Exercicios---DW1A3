@@ -13,15 +13,15 @@
       <p> 2º Número 
         <input type="text" size="10" maxlength="30" id="num2"/>
       </p>
-      <input type="button" value="Somar Números" onclick="somaNumero()" id="botaoSoma"/>
+      <input type="button" value="Somar Números" id="botaoSoma"/>
     </form>
     <p id="resposta"></p>
     <script>
-      var a, b;
+      var a, b, botao;
       a = document.getElementById("num1").value;
       b = document.getElementById("num2").value;
-      //Number(a);
-      //Number(b);      
+      botao = document.querySelector("#botaoSoma");
+      botao.onclick = somaNumero;  
       function somaNumero(){
         return a + b;
       }
