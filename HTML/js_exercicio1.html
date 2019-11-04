@@ -8,14 +8,18 @@
     <p> 2º Número 
       <input type="text" name="username" size="10" maxlength="30" id="num2"/>
     </p>
-    <input type="button" name="Somar" value="Input Button"/>
+    <input type="button" name="Somar" value="Input Button" id="botaoSoma"/>
     
     <script>
       var a, b, c;
       a = document.getElementById('num1');
       b = document.getElementById('num2');
       c = a + b;
-      console.log (c);
+      c.onclick somaNumero();
+      
+      function somaNumero(){
+        console.log (c);
+      }
     </script>
   </body>
 </html>
