@@ -13,15 +13,15 @@
     </form>
     <script>
       var a, b, c, botao;
-      a = document.getElementById('num1');
-      b = document.getElementById('num2');
+      a = document.getElementById('num1').value;
+      b = document.getElementById('num2').value;
       c = a + b;
       
       botao = document.querySelector("#botaoSoma");
       botao.onclick = somaNumero();
       
       function somaNumero(){
-        console.log(c);
+        alert(c);
       }
     </script>
   </body>
