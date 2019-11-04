@@ -3,14 +3,14 @@
 <html>
   <body>
     <form action="">
-    <p> 1º Número 
-      <input type="text" name="username" size="10" maxlength="30" id="num1"/>
-    </p>
-    <p> 2º Número 
-      <input type="text" name="username" size="10" maxlength="30" id="num2"/>
-    </p>
-    <input type="button" name="Somar" value="Somar Números" id="botaoSoma"/>
-    
+      <p> 1º Número 
+        <input type="text" name="username" size="10" maxlength="30" id="num1"/>
+      </p>
+      <p> 2º Número 
+        <input type="text" name="username" size="10" maxlength="30" id="num2"/>
+      </p>
+      <input type="button" name="Somar" value="Somar Números" id="botaoSoma"/>
+    </form>
     <script>
       var a, b, c, botao;
       a = document.getElementById('num1');
@@ -21,7 +21,7 @@
       botao.onclick = somaNumero();
       
       function somaNumero(){
-        alert(c);
+        console.log(c);
       }
     </script>
   </body>
