@@ -12,13 +12,13 @@
     <input type="button" name="Somar" value="Somar Números" id="botaoSoma"/>
     
     <script>
-      var a, b, c, d;
+      var a, b, c, botao;
       a = document.getElementById('num1');
       b = document.getElementById('num2');
       c = a + b;
       
-      d = document.querySelector("#botaoSoma");
-      d.onclick = somaNumero();
+      botao = document.querySelector("#botaoSoma");
+      botao.onclick = somaNumero();
       
       function somaNumero(){
         alert(c);
