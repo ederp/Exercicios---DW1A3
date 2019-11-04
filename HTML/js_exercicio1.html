@@ -8,14 +8,16 @@
     <p> 2º Número 
       <input type="text" name="username" size="10" maxlength="30" id="num2"/>
     </p>
-    <input type="button" name="Somar" value="Input Button" id="botaoSoma"/>
+    <input type="button" name="Somar" value="Somar Números" id="botaoSoma"/>
     
     <script>
-      var a, b, c;
+      var a, b, c, d;
       a = document.getElementById('num1');
       b = document.getElementById('num2');
       c = a + b;
-      c.onclick somaNumero();
+      
+      d = document.querySelector("#botaoSoma");
+      d.onclick somaNumero();
       
       function somaNumero(){
         console.log (c);
