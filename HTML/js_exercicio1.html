@@ -15,6 +15,7 @@
       </p>
       <input type="button" value="Somar Números" " id="botaoSoma"/>
     </form>
+    <p id="resposta"></p>
     <script>
       var a, b, botao;
       a = document.getElementById('num1').value;
@@ -26,6 +27,7 @@
       function somaNumero(a,b){
         return a + b;
       }
+      document.getElementById("resposta").innerHTML = somaNumero();
     </script>
   </body>
 </html>
