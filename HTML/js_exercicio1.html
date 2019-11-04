@@ -21,11 +21,11 @@
       a = document.getElementById("num1").value;
       b = document.getElementById("num2").value;
       botao = document.querySelector("#botaoSoma");
-      function somaNumero(){
+      function somaNumero(a,b){
         return a + b;
       }
-      botao.onclick = somaNumero();
-      document.getElementById("resposta").innerHTML = somaNumero();
+      botao.onclick = somaNumero;
+      document.getElementById("resposta").innerHTML = somaNumero(a,b);
     </script>
   </body>
 </html>
