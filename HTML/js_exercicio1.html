@@ -3,18 +3,18 @@
   <body>
     <form action="">
     <p> 1º Número 
-      <input type="number" name="username" size="10" maxlength="50"/>
+      <input type="number" name="username" size="10" maxlength="50" id="num1"/>
     </p>
     <p> 2º Número 
-      <input type="number" name="username" size="10" maxlength="50"/>
+      <input type="number" name="username" size="10" maxlength="50" id="num2"/>
     </p>
     <input type="button" name="Somar" value="Input Button"/>
     
     <script>
-      console.log(10 + 6);
+      console.log('num1' + 'num2');
       var a, b, c;
-      a = 10;
-      b = 6;
+      a = document.getElementById('num1');
+      b = document.getElementById('num2');
       c = a + b;
       console.log (c);
     </script>
