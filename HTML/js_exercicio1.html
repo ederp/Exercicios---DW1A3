@@ -18,8 +18,8 @@
     <p id="resposta"></p>
     <script>
       var a, b, botao;
-      a = document.getElementById("num1").value;
-      b = document.getElementById("num2").value;
+      a = Number(document.getElementById("num1").value);
+      b = Number(document.getElementById("num2").value);
       botao = document.querySelector("#botaoSoma");
       function somaNumero(a,b){
         return a + b;
