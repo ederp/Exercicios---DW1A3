@@ -24,7 +24,7 @@
       function somaNumero(a,b){
         return a + b;
       }
-      botao.onclick = somaNumero;
+      botao.onclick = function() {somaNumero()};
       document.getElementById("resposta").innerHTML = somaNumero(a,b);
     </script>
   </body>
