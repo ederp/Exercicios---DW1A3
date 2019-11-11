@@ -17,11 +17,11 @@
     </form>
     <p id="resposta"></p>
     <script>
-      var a, b, botao;
-      a = Number(document.getElementById("num1").value);
-      b = Number(document.getElementById("num2").value);
-      botao = document.querySelector("#botaoSoma");
       function somaNumero(){
+        var a, b, botao;
+        a = Number(document.getElementById("num1").value);
+        b = Number(document.getElementById("num2").value);
+        botao = document.querySelector("#botaoSoma");
         return a + b;
       }
       botao.onclick = somaNumero;
