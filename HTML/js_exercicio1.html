@@ -21,11 +21,10 @@
         var a, b;
         a = Number(document.getElementById("num1").value);
         b = Number(document.getElementById("num2").value);
-        return a + b;
+        document.getElementById("resposta").innerHTML = a + b;
       }
       var botao = document.getElementById("botaoSoma");
       botao.addEventListener("click", somaNumero);
-      document.getElementById("resposta").innerHTML = somaNumero();
     </script>
   </body>
 </html>
