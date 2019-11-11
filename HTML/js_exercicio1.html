@@ -18,12 +18,13 @@
     <p id="resposta"></p>
     <script>
       function somaNumero(){
-        var a, b, botao;
+        var a, b;
         a = Number(document.getElementById("num1").value);
         b = Number(document.getElementById("num2").value);
-        botao = document.querySelector("#botaoSoma");
         return a + b;
       }
+      var botao;
+      botao = document.querySelector("#botaoSoma");
       botao.onclick = somaNumero;
       document.getElementById("resposta").innerHTML = somaNumero();
     </script>
