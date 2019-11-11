@@ -23,10 +23,8 @@
         b = Number(document.getElementById("num2").value);
         return a + b;
       }
-      var botao;
-      botao = document.querySelector("#botaoSoma");
-      botao.onclick = somaNumero;
-      document.getElementById("resposta").innerHTML = somaNumero();
+      var botao = document.getElementById("resposta");
+      botao.addEventListener("click", somaNumero);
     </script>
   </body>
 </html>
