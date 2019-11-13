@@ -24,7 +24,7 @@ gramas) de um cliente. Exiba o valor a ser pago. -->
         //Usando a função Number para converter o tipo texto em um número inteiro
         ppq = Number(document.getElementById("buffet").value);
         cc = Number(document.getElementById("consumo").value);
-        document.getElementById("resposta").innerHTML = a + b;
+        document.getElementById("resposta").innerHTML = (ppq * cc)/1000;
       }
       // cria uma referência ao botão (com id=) botaoSoma
       var botao = document.getElementById("botaoSoma");
