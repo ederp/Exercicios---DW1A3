@@ -15,8 +15,10 @@ Para mulheres: 21*altura^2 -->
         <input type="text" size="10" maxlength="50" id="nome"/>
       </p>
       <p> Sexo:
-        <input type="radio" name="genero" value="m"/> Masculino
-        <input type="radio" name="genero" value="f"/> Feminino
+        <input id="masc" type="radio" name="genero" value="m"/> 
+        <label for="masc">Masculino</label>
+        <input id="fem" type="radio" name="genero" value="f"/> 
+        <label for="fem">Feminino</label>
       </p>
       <p> Altura:
         <input type="text" size="10" maxlength="50" id="altura"/>
@@ -43,8 +45,8 @@ Para mulheres: 21*altura^2 -->
       function limparCampos() {
         // Limpa os conteúdos dos elementos
         document.getElementById("nome").value = "";
-        document.getElementById("m").checked = false;
-        document.getElementById("f").checked = false;
+        document.getElementById("masc").checked = false;
+        document.getElementById("fem").checked = false;
         document.getElementById("altura").value = "";
         document.getElementById("resposta").textContent = "";
         // posiciona (joga o foco) no elemento inNome
