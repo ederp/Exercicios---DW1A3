@@ -25,8 +25,7 @@ gramas) de um cliente. Exiba o valor a ser pago. -->
         ppq = parseFloat(document.getElementById("buffet").value);
         cc = parseFloat(document.getElementById("consumo").value);
         preco = (ppq * cc)/1000;
-        preco.toFixed(2);
-        document.getElementById("resposta").innerHTML = "R$ "+preco;
+        document.getElementById("resposta").innerHTML = "R$ "+preco.toFixed(2);
       }
       // cria uma referência ao botão (com id=) botaoSoma
       var botao = document.getElementById("calculaPreco");
