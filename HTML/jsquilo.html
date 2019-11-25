@@ -4,7 +4,7 @@ gramas) de um cliente. Exiba o valor a ser pago. -->
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Exercício 1 de JavaScript</title>
+    <title>Exercício 1 da lista de JavaScript</title>
   </head>
   <body>
     <h1> Restaurante JS</h1>
@@ -20,16 +20,18 @@ gramas) de um cliente. Exiba o valor a ser pago. -->
     <p id="resposta"></p>
     <script>
       function calcularPrecoBuffet(){
-        var ppq, cc;
+        var ppq, cc, preco;
         //Usando a função Number para converter o tipo texto em um número inteiro
         ppq = Number(document.getElementById("buffet").value);
         cc = Number(document.getElementById("consumo").value);
-        document.getElementById("resposta").innerHTML = (ppq * cc)/1000;
+        preco = (ppq * cc)/1000;
+        preco.toPrecsion(2);
+        document.getElementById("resposta").innerHTML = preco;
       }
       // cria uma referência ao botão (com id=) botaoSoma
-      var botao = document.getElementById("botaoSoma");
+      var botao = document.getElementById("calculaPreco");
       // que ao ser clicado irá chamar a função somaNumero
-      botao.addEventListener("click", somaNumero);
+      botao.addEventListener("click", calcularPrecoBuffet);
     </script>
   </body>
 </html>
