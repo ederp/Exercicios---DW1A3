@@ -32,7 +32,7 @@ Para mulheres: 21*altura^2 -->
         var sexo, alt, imc;
         //Usando a função parseFloat para converter o tipo texto em um número de ponto flutuante
         alt = parseFloat(document.getElementById("altura").value);
-        sexo = document.getElementsByName("genero");
+        sexo = document.getElementsByName("genero").value;
         if(sexo == 'm'){
           imc = 21 * alt * alt;
         }
@@ -55,7 +55,7 @@ Para mulheres: 21*altura^2 -->
       var btLimpar = document.getElementById("btLimparCampos");
       btLimpar.addEventListener("click", limparCampos);
       
-      // cria uma referência ao botão (com id=) botaoSoma
+      // cria uma referência ao botão (com id=) btCalculaIMC
       var botao = document.getElementById("btCalculaImc");
       // que ao ser clicado irá chamar a função calcularIMC
       botao.addEventListener("click", calcularIMC);
