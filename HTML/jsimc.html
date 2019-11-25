@@ -1,0 +1,62 @@
+<!-- Faça um programa que leia a altura (em metro) e calcule o peso ideal. Utilize as fórmulas:
+Para homens: 22*altura^2
+Para mulheres: 21*altura^2 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercício 2 da lista de JavaScript</title>
+  </head>
+  <body>
+    <h1> Programa Cálculo do Peso Ideal</h1>
+    <form>
+      <p> Nome:
+        <input type="text" size="10" maxlength="50" id="nome"/>
+      </p>
+      <p> Sexo:
+        <input type="radio" name="genero" value="m"/> Masculino
+        <input type="radio" name="genero" value="f"/> Feminino
+      </p>
+      <p> Altura:
+        <input type="text" size="10" maxlength="50" id="altura"/>
+      </p>
+      <input type="button" value="Calcular Peso Ideal" id="btCalculaImc"/>
+      <input type="button" value="Limpar Campos" id="btLimparCampos"/>
+    </form>
+    <p id="resposta"></p>
+    <script>
+      function calcularIMC(){
+        var sexo, alt, imc;
+        //Usando a função parseFloat para converter o tipo texto em um número de ponto flutuante
+        alt = parseFloat(document.getElementById("altura").value);
+        sexo = document.getElementById("genero").name;
+        if(sexo == 'm'){
+          imc = 21 * alt * alt;
+        }
+        if(sexo == 'f'){
+          imc = 22 * alt * alt;
+        }
+        document.getElementById("resposta").innerHTML = imc;
+      }
+      
+      function limparCampos() {
+        // Limpa os conteúdos dos elementos
+        document.getElementById("nome").value = "";
+        document.getElementById("m").checked = false;
+        document.getElementById("f").checked = false;
+        document.getElementById("altura").value = "";
+        document.getElementById("resposta").textContent = "";
+        // posiciona (joga o foco) no elemento inNome
+        document.getElementById("nome").focus();
+      }
+      var btLimpar = document.getElementById("btLimparCampos");
+      btLimpar.addEventListener("click", limparCampos);
+      
+      // cria uma referência ao botão (com id=) botaoSoma
+      var botao = document.getElementById("btCalculaImc");
+      // que ao ser clicado irá chamar a função calcularIMC
+      botao.addEventListener("click", calcularIMC);
+    </script>
+  </body>
+</html>
