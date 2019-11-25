@@ -38,7 +38,7 @@ Para mulheres: 21*altura^2 -->
         if(document.getElementById("fem").checked == true){
           imc = 21 * alt * alt;
         }
-        document.getElementById("resposta").innerHTML = imc.toPrecision(2);
+        document.getElementById("resposta").innerHTML = imc.toFixed(2) +" kg";
       }
       
       function limparCampos() {
