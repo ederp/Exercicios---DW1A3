@@ -21,9 +21,9 @@ gramas) de um cliente. Exiba o valor a ser pago. -->
     <script>
       function calcularPrecoBuffet(){
         var ppq, cc, preco;
-        //Usando a função Number para converter o tipo texto em um número inteiro
-        ppq = Number(document.getElementById("buffet").value);
-        cc = Number(document.getElementById("consumo").value);
+        //Usando a função parseFloat para converter o tipo texto em um número de ponto flutuante
+        ppq = parseFloat(document.getElementById("buffet").value);
+        cc = parseFloat(document.getElementById("consumo").value);
         preco = (ppq * cc)/1000;
         preco.toFixed(2);
         document.getElementById("resposta").innerHTML = "R$ "+preco;
