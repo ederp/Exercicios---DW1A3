@@ -30,7 +30,7 @@ Para mulheres: 21*altura^2 -->
         var sexo, alt, imc;
         //Usando a função parseFloat para converter o tipo texto em um número de ponto flutuante
         alt = parseFloat(document.getElementById("altura").value);
-        sexo = document.getElementById("genero").name;
+        sexo = document.getElementsByName("genero");
         if(sexo == 'm'){
           imc = 21 * alt * alt;
         }
