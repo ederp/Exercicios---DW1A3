@@ -31,7 +31,7 @@ deverá retornar a data limite do pagamento com desconto e o valor a ser pago ne
         data = new Date();
         document.getElementById("dtMulta").innerHTML = data;
         //adicionando 90 dias a data informada no formulário
-        data = data + 7776000000;
+        data = data.getTime() + 7776000000;
         //calculando o desconto de 20% da multa
         vm = vm * 0.8;
         //a função toFixed() retorna o número com exatamente duas casas decimais
