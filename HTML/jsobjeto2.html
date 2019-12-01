@@ -29,7 +29,7 @@ deverá retornar a data limite do pagamento com desconto e o valor a ser pago ne
         vm = parseFloat(document.getElementById("valMulta").value);
         //criando um objeto do tipo Date para receber a data informada no formulário
         data = new Date();
-        document.getElementById("dtMulta").innerHTML = data;
+        data = document.getElementById("dtMulta").innerHTML;
         //adicionando 90 dias a data informada no formulário
         data = data.getTime() + 7776000000;
         //calculando o desconto de 20% da multa
