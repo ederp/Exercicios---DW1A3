@@ -26,7 +26,7 @@ deverá retornar a data limite do pagamento com desconto e o valor a ser pago ne
       function calcularMultaDesc(){
         var data, vm;
         //criando um objeto do tipo Date para receber a data informada no formulário
-        data = new Date(document.getElementById("dtMulta").value);
+        data = new Date(document.getElementById("dtMulta"));
         //Usando a função parseFloat para converter o tipo texto em um número de ponto flutuante
         vm = parseFloat(document.getElementById("valMulta").value);
         //adicionando 90 dias a data informada no formulário
