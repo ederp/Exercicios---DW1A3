@@ -20,7 +20,8 @@ deverá retornar a data limite do pagamento com desconto e o valor a ser pago ne
       </p>
       <input type="button" value="Calcular Valores da Multa" id="btCalculaMulta"/>
     </form>
-    <p id="resposta"></p>
+    <p id="resposta1"></p>
+    <p id="resposta2"></p>
     <script>
       function calcularMultaDesc(){
         var vm, data;
@@ -34,7 +35,8 @@ deverá retornar a data limite do pagamento com desconto e o valor a ser pago ne
         //calculando o desconto de 20% da multa
         vm = vm * 0.8;
         //a função toFixed() retorna o número com exatamente duas casas decimais
-        document.getElementById("resposta").innerHTML = "Data limite do pagamento com desconto de 20%: "+data+"/nValor do pagamento com desconto: R$ "+vm.toFixed(2);
+        document.getElementById("resposta1").innerHTML = "Data limite do pagamento com desconto de 20%: "+data.getDate()+"/"+data.getMonth()+"/"+data.getYear();
+        document.getElementById("resposta2").innerHTML = "Valor do pagamento com desconto: R$ "+vm.toFixed(2);
       }
       // cria uma referência ao botão (com id=) btCalculaMulta
       var botao = document.getElementById("btCalculaMulta");
