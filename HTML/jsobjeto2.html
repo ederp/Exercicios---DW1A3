@@ -26,11 +26,11 @@ deverá retornar a data limite do pagamento com desconto e o valor a ser pago ne
       function calcularMultaDesc(){
         var data, vm;
         //criando um objeto do tipo Date para receber a data informada no formulário
-        data = new Date(document.getElementById("dtMulta"));
+        data = new Date(document.getElementById("dtMulta").value);
         //Usando a função parseFloat para converter o tipo texto em um número de ponto flutuante
         vm = parseFloat(document.getElementById("valMulta").value);
         //adicionando 90 dias a data informada no formulário
-        data = data.getTime() + 7776000000;
+        data.setTime(data.getTime() + 7776000000);
         //calculando o desconto de 20% da multa
         vm = vm * 0.8;
         //a função toFixed() retorna o número com exatamente duas casas decimais
