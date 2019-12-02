@@ -24,7 +24,7 @@ deverá retornar a data limite do pagamento com desconto e o valor a ser pago ne
     <p id="resposta2"></p>
     <script>
       function calcularMultaDesc(){
-        var data, vm;
+        var data, vm, exibeMes;
         //criando um objeto do tipo Date para receber a data informada no formulário
         data = new Date(document.getElementById("dtMulta").value);
         //Usando a função parseFloat para converter o tipo texto em um número de ponto flutuante
@@ -33,8 +33,10 @@ deverá retornar a data limite do pagamento com desconto e o valor a ser pago ne
         data.setTime(data.getTime() + (1000 * 60 * 60 * 24 * 90));
         //calculando o desconto de 20% da multa
         vm = vm * 0.8;
+        //uma variavel criada somente para exibir o mês correto pois o método getMonth() retorna os números de 0 a 11
+        exibeMes = data.getMonth() + 1;
+        document.getElementById("resposta1").innerHTML = "Data limite do pagamento com desconto de 20%: "+data.getDate()+"/"+exibeMes+"/"+data.getFullYear();
         //a função toFixed() retorna o número com exatamente duas casas decimais
-        document.getElementById("resposta1").innerHTML = "Data limite do pagamento com desconto de 20%: "+data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
         document.getElementById("resposta2").innerHTML = "Valor do pagamento com desconto: R$ "+vm.toFixed(2);
       }
       // cria uma referência ao botão (com id=) btCalculaMulta
