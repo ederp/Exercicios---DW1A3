@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <title>Exercício 1 de JavaScript</title>
     <style>
+      body{
+        font-size: verdana;
+      }
       #botaoSoma{
         background-color: #4CAF50;
         color: white;
         text-align: center;
+        margin: 2px 2px;
       }
     </style>
   </head>
@@ -22,14 +26,14 @@
       </p>
       <input type="button" value="Somar Números" id="botaoSoma"/>
     </form>
-    <h3 id="resposta"></h3>
     <script>
       function somaNumero(){
         var a, b;
         //Usando a função Number para converter o tipo texto em um número inteiro
         a = Number(document.getElementById("num1").value);
         b = Number(document.getElementById("num2").value);
-        document.getElementById("resposta").innerHTML = a + b;
+        //Exibindo o resultado usando o console
+        console.log(a + b);
       }
       // cria uma referência ao botão (com id=) botaoSoma
       var botao = document.getElementById("botaoSoma");
