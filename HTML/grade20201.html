@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Mesclar linhas em uma tabela</title>
+    <style type="text/css">
+      table{
+        border:none;}
+      .paragrafo{
+      font-family: Arial}
+      th,td{
+        border:none;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #bbffcc;
+        padding: 5px;
+        width :100px;}
+    </style>
+  </head>
+  <body>
+    <h1 class="paragrafo">Grade horária do 1º semestre de 2020</h1>
+    <table>
+      <tr>
+        <th></th>
+        <th>Segunda</th>
+        <th>Terça</th>
+        <th>Quarta</th>
+        <th>Quinta</th>
+        <th>Sexta</th>
+      </tr>
+      <tr>
+        <th>18:50 - 19:35</th>
+        <td rowspan ="5">Desenvolvimento Web II<br>Lab 1 e 3<br>Domingos Latorre</td>
+        <td rowspan="5">Eng. de Software III<br>Lab 4 e 5<br>Domingos Latorre</td>
+        <td rowspan="5">Linguagem de Programação I<br>Lab 5 e 15<br>Leonardo Bertholdo</td>
+        <td rowspan="5"></td>
+        <td rowspan="5">Serviços e Servidores de Rede<br>Lab 12<br>Leandro Santana</td>
+      </tr>
+      <tr>
+        <th>19:35 - 20:20</th>
+      </tr>
+      <tr>
+        <th>20:20 - 21:05</th>
+      </tr>
+      <tr>
+        <th>21:20 - 22:05</th>
+      </tr>
+      <tr>
+        <th>22:05 - 22:50</th>
+      </tr>
+    </table>
+  </body>
+  </html>
